@@ -1,0 +1,4 @@
+test:
+  adapter: postgresql
+  database: eduteach_test
+  username: postgres

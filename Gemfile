@@ -1,70 +1,41 @@
-source "https://rubygems.org"
-ruby "2.1.4"
+source 'https://rubygems.org'
 
-# Core gems
-gem "rails", "4.1.7"
-gem "thin"
-gem "pg"
-gem "figaro"
 
-# Components
-gem "turbolinks"
-gem "devise"
-gem "simple_form"
-gem "gon"
-gem "kaminari"
-gem "recipient_interceptor"
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.1.5'
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3'
+gem 'carrierwave'
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.3'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.0.0'
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# gem 'therubyracer',  platforms: :ruby
 
-# Frontend
-gem "sass-rails", "~> 4.0.3"
-gem "coffee-rails"
-gem "jquery-rails"
-gem "uglifier"
-gem "slim-rails"
-gem "autoprefixer-rails"
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'turbolinks'
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 2.0'
+# bundle exec rake doc:rails generates the API under doc/api.
+gem 'sdoc', '~> 0.4.0',          group: :doc
 
-gem "flutie"
-gem "title"
+# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+gem 'spring',        group: :development
 
-# Error logging - requires setup with service
-gem "rollbar"
+# Use ActiveModel has_secure_password
+# gem 'bcrypt', '~> 3.1.7'
 
-group :development do
-  gem "annotate"
-  gem "better_errors"
-  gem "binding_of_caller"
-  gem "quiet_assets"
-  gem "spring"
-  gem "spring-commands-rspec"
-  gem "rubocop"
-  gem "guard-rubocop"
-  gem "guard-livereload"
-  gem "i18n-tasks"
-end
+# Use unicorn as the app server
+# gem 'unicorn'
 
-group :development, :test do
-  gem "awesome_print"
-  gem "pry-rails"
-  gem "pry-byebug"
+# Use Capistrano for deployment
+# gem 'capistrano-rails', group: :development
 
-  gem "rspec-rails", "~> 3.1.0"
-  gem "factory_girl_rails"
-  gem "ffaker"
-end
+# Use debugger
+# gem 'debugger', group: [:development, :test]
 
-group :test do
-  gem "shoulda-matchers", require: false
-  gem "database_cleaner"
-  gem "capybara"
-  gem "launchy"
-  gem "guard-rspec"
-
-  gem "codeclimate-test-reporter", require: nil
-end
-
-group :staging, :production do
-  gem "rails_12factor"
-
-  # Analytics - requires setup
-  gem "newrelic_rpm"
-end
